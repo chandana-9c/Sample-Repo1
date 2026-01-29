@@ -24,3 +24,22 @@ pipeline {
 	    }
 	}
 }
+
+/*
+* pipeline {
+*  agent any
+*  stages {
+*    stage('Check changes') {
+*      when {
+*        changeset "Folder2/**"
+*      }
+*      steps {
+*        echo "Folder2 changed → running pipeline"
+*      }
+*    }
+*  }
+*}
+*/
+
+
+
