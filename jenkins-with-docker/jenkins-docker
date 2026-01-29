@@ -3,7 +3,7 @@ pipeline {
     stages {
       stage('Checkout') {
         steps {
-	  git branch: 'jdocker', url: 'https://github.com/chandana-9c/Sample-Repo1'
+	  git branch: 'bdocker', url: 'https://github.com/chandana-9c/Sample-Repo1'
 	}
       }
       stage('Build Docker Image') {
