@@ -15,7 +15,7 @@ pipeline {
     stage('Run Docker Container') {
       steps {
         echo "Running Docker container..."
-        sh 'docker run -rm jenkins-docker-demo:latest'
+        sh 'docker run --rm jenkins-docker-demo:latest'
       }
     }
     }
