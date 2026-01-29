@@ -1,5 +1,9 @@
 # Dockerfile
 FROM python:3.11-slim
-WORKDIR /jenkins-with-docker/app                  # current working dir
-COPY jenkins-d.py .           # = COPY jenkins-d.py /app/jenkins-d.py
+
+# current working dir
+WORKDIR /jenkins-with-docker/app                  
+
+# = COPY jenkins-d.py /app/jenkins-d.py
+COPY jenkins-d.py . 
 CMD ["python", "jenkins-d.py"]
