@@ -8,18 +8,18 @@ pipeline {
 	    }
 	    stage('Build') {
 		steps {
-		    echo "Building the project..."
+		    echo "Building the project......................main branch"
 		}
 	    }
 	    stage('Test') {
 		steps {
-		    echo "Running tests..."
+		    echo "Running tests...-------------------main branch"
 		    sh 'python3 jenkins-pipeline-demo/pipeline.py'
 		}
 	    }
 	    stage('Deploy') {
 		steps {
-		    echo "Deploy stage demo complete......................!"
+		    echo "Deploy stage demo complete......................main branch"
 		}
 	    }
 	}
