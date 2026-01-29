@@ -14,12 +14,12 @@ pipeline {
 	    stage('Test') {
 		steps {
 		    echo "Running tests..."
-		    sh 'python3 pipeline.py'
+		    sh 'python3 jenkins-pipeline-demo/pipeline.py'
 		}
 	    }
 	    stage('Deploy') {
 		steps {
-		    echo "Deploy stage demo complete......................!"
+		    echo "Deploy stage demo complete......................1"
 		}
 	    }
 	}
