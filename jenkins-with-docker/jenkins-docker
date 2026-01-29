@@ -1,0 +1,22 @@
+pipeline {
+  agent any
+    stages {
+      stage('Checkout') {
+        steps {
+	  git branch: 'jdocker', url: 'https://github.com/chandana-9c/Sample-Repo1'
+	}
+      }
+      stage('Build Docker Image') {
+      steps {
+	echo "Building Docker image..."
+	sh 'docker build t jenkins-docker-demo:latest.
+      }
+    }
+    stage('Run Docker Container') {
+      steps {
+        echo "Running Docker container..."
+        sh 'docker run -rm jenkins-docker-demo:latest'
+      }
+    }
+    }
+}
