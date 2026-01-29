@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+        stages {
+	    stage('Checkout') {
+		steps {
+		    git branch: 'j-pipeline', url: 'https://github.com/chandana-9c/Sample-Repo1'
+		}
+	    }
+	    stage('Build') {
+		steps {
+		    echo "Building the project..."
+		}
+	    }
+	    stage('Test') {
+		steps {
+		    echo "Running tests..."
+		    sh 'python3 pipeline.py'
+		}
+	    }
+	    stage('Deploy') {
+		steps {
+		    echo "Deploy stage demo complete......................!"
+		}
+	    }
+	}
+}
